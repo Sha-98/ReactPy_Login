@@ -8,3 +8,5 @@ Current version of code has a bug, the form is getting reloaded when we click on
 
 Another need for this project is connection between app and mongodb atlas database. 
 
+To run the app, install all the necessary libraries including uvicorn and fastapi.
+Open terminal of VSCode (as I do this, and I am a beginner), and run "uvicorn main:app --reload"
