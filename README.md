@@ -19,19 +19,19 @@ To install the new python library ‘ReactPy’, which is based on React, a Java
 
 ReactPy includes build-in support for the implementation of these backend, and to install the required dependencies for each of these, the following code should be used, by choosing one of these from the list in the code. Also note, that you can install more than one options separated from a comma.
 
-pip install "reactpy[fastapi,flask,sanic,starlette,tornado]"
+_**pip install "reactpy[fastapi,flask,sanic,starlette,tornado]"
 
-pip install "reactpy[fastapi]"
+pip install "reactpy[fastapi]"**_
 
 If  you want to install a “pure” version of ReactPy without a backend implementation, you can also do so without any installation extras using the “pip” command as follows.
 
-pip install reactpy
+**pip install reactpy**__
 
 Now if you are using visual studio code, installation would require one more step, so that you do not get error for “ModuleNotFound”. For this, first open the folder for your project in VS Code and create a python file there.
 Now, for installing python libraries, we need to create the virtual environment here first, using the following line of code.
 
-python -m venv “Path of your folder with ‘venv’ folder”
-python -m venv c:/Users/Asus/Desktop/Project/venv
+**python -m venv “Path of your folder with ‘venv’ folder”
+python -m venv c:/Users/Asus/Desktop/Project/venv**__
 
 ![image](https://github.com/Sha-98/ReactPy_Login/assets/89126969/b2edf2d1-2081-4e3e-aa04-588037e0b5b2)
 
