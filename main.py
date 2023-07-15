@@ -11,22 +11,14 @@ def MyCrud():
     ## Creating state
     alltodo = use_state([])
     name, set_name = use_state("")
-    age, set_age = use_state(0)
-    # email, set_email = use_state(1)
-    # phone, set_phone = use_state(2)
+    password, set_password = use_state(0)
 
-    # preventing reload on submit
-    # @rp.event(prevent_default=True)
     def mysubmit(event):
-        newtodo = {"name": name, "age": age}
+        newtodo = {"name": name, "passowrd": password}
 
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
 
-    # def deletebtn(b):
-    #     print("you select", b)
-    #     update_todos = [item for index, item in enumerate(alltodo.value) if index != b]
-    #     alltodo.set_value(update_todos)
 
     # looping data from alltodo to show on web
 
@@ -35,11 +27,9 @@ def MyCrud():
             {
                 # {"key": b},
             },
-            f"{b} => {i['name']} - {i['age']} {'years old'}",
+            f"{b} => {i['name']} ; {i['password']} ",
         )
-        # create a button
-        # html.button({"on_click": lambda event, b=b: deletebtn(b)}, "delete"),
-        # html.button({"on_click": lambda event, b=b: editbtn(b)}, "edit"),
+
         for b, i in enumerate(alltodo.value)
     ]
 
@@ -62,24 +52,10 @@ def MyCrud():
             html.input(
                 {
                     "type": "test",
-                    "placeholder": "Age",
-                    "on_change": lambda event: set_age(event["target"]["value"]),
+                    "placeholder": "Password",
+                    "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
-            # html.input(
-            #     {
-            #         "type": "test",
-            #         "placeholder": "email id",
-            #         "on_change": lambda event: set_age(event["target"]["value"]),
-            #     }
-            # ),
-            # html.input(
-            #     {
-            #         "type": "test",
-            #         "placeholder": "phone number",
-            #         "on_change": lambda event: set_age(event["target"]["value"]),
-            #     }
-            # ),
             # creating submit button on form
             html.button(
                 {
@@ -121,8 +97,6 @@ async def login(login_data: dict):
     # logger.info('sample log message')
     print(document)
     # Insert the document into the collection
-    client.collection("users").insert_one(document)
-    # collection.insert_one(document)
 
     return {"message": "Login successful"}
 
