@@ -9,6 +9,31 @@
 
 To create a basic registration form using ReactPy, which is connected with  the MongoDB database, you can follow the below mentioned steps and code. Please note that all the dependencies and libraries used in the code must be installed in your system. One thing to note here is that reactpy is a python library and thus we do not need any specific commands to start a new project in reactpy. Just install it as explained above and import the library and required module to create an app.
 
+### Step 0: Install ReactPy
+To install the new python library ‘ReactPy’, which is based on React, a JavaScript library for building user interfaces. ReactPy is a python-based version of this library using which we can now build user interfaces using python. For installing this library into your system, we can use ‘pip’. Now, ReactPy currently can be downloaded in multiple formats, in combination with different backends as listed below.
+•	fastapi – https://fastapi.tiangolo.com 
+•	flask –  https://palletsprojects.com/p/flask/ 
+•	sanic – https://sanicframework.org 
+•	starlette – https://www.starlette.io/ 
+•	tornado – https://www.tornadoweb.org/en/stable/ 
+
+ReactPy includes build-in support for the implementation of these backend, and to install the required dependencies for each of these, the following code should be used, by choosing one of these from the list in the code. Also note, that you can install more than one options separated from a comma.
+
+pip install "reactpy[fastapi,flask,sanic,starlette,tornado]"
+pip install "reactpy[fastapi]"
+
+If  you want to install a “pure” version of ReactPy without a backend implementation, you can also do so without any installation extras using the “pip” command as follows.
+
+pip install reactpy
+
+Now if you are using visual studio code, installation would require one more step, so that you do not get error for “ModuleNotFound”. For this, first open the folder for your project in VS Code and create a python file there.
+Now, for installing python libraries, we need to create the virtual environment here first, using the following line of code.
+
+python -m venv “Path of your folder with ‘venv’ folder”
+python -m venv c:/Users/Asus/Desktop/Project/venv
+
+![image](https://github.com/Sha-98/ReactPy_Login/assets/89126969/b2edf2d1-2081-4e3e-aa04-588037e0b5b2)
+
 
 ### Step 1: Setting up the Backend Server and MongoDB Connection
 
