@@ -20,6 +20,7 @@ To install the new python library ‘ReactPy’, which is based on React, a Java
 ReactPy includes build-in support for the implementation of these backend, and to install the required dependencies for each of these, the following code should be used, by choosing one of these from the list in the code. Also note, that you can install more than one options separated from a comma.
 
 pip install "reactpy[fastapi,flask,sanic,starlette,tornado]"
+
 pip install "reactpy[fastapi]"
 
 If  you want to install a “pure” version of ReactPy without a backend implementation, you can also do so without any installation extras using the “pip” command as follows.
